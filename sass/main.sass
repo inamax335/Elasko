@@ -1,0 +1,1380 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    &:before, &:after
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+
+*::-webkit-input-placeholder
+    color: #666
+    opacity: 1
+
+*:-moz-placeholder
+    color: #666
+    opacity: 1
+
+*::-moz-placeholder
+    color: #666
+    opacity: 1
+
+*:-ms-input-placeholder
+    color: #666
+    opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    color: #666
+body input:required:valid,
+body textarea:required:valid
+    color: #666
+
+html, body
+    height: 100%
+
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.65
+    overflow-x: hidden
+    opacity: 1
+    font-family: $default_font
+    font-weight: normal
+
+h1, h2, h3, h4, h5, h6, .page_title
+    font-family: $hfont
+    font-size: 100px
+    letter-spacing: -29px
+    margin: 0 0 0 -18px
+    font-weight: normal
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+header
+    &.homeheader
+        position: relative
+        height: 100vh
+        // background-image: url("../img/home_img/header_bg.jpg")
+        background-repeat: no-repeat
+        background-size: cover
+        video
+            position: absolute
+            width: 100%
+
+        #scroll_down
+            display: inline-block
+            position: absolute
+            margin: 0 auto
+            bottom: 25px
+            left: 0
+            right: 0
+            background-color: #FFF
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.27)
+            background-image: url("../img/icons/Arroe.png")
+            background-repeat: no-repeat
+            background-position: center 20px
+            z-index: 5
+
+.left_layer
+    background-color: rgba(207, 222, 60, 1)
+    display: block
+    text-align: center
+    z-index: 2
+    position: relative
+    padding: 20px 20px
+    position: absolute
+    width: 80%
+    right: 0
+    left: 0
+    margin: 0 auto
+    bottom: -210px
+    .title_box
+    .head_title
+        font-family: $hfont
+        font-size: 150px
+        color: #000000
+        letter-spacing: -35px
+        line-height: 170px
+        margin-bottom: -5px
+    .slogan
+        font-size: 20px
+        font-family: "HelveticaNeue-light", sans-serif
+        text-transform: uppercase
+        margin-bottom: 30px
+        position: relative
+        .line
+            height: 3px
+            background-color: #000
+            width: 100%
+            position: absolute
+            right: 0
+            bottom: -40px
+        span
+            font-family: "HelveticaNeue-medium", sans-serif
+    .head_desc
+        font-family: "HelveticaNeue-medium", sans-serif
+        font-size: 20px
+        font-weight: normal
+        margin-top: 67px
+        line-height: 35px
+        margin-bottom: 15px
+        letter-spacing: normal
+    form
+        .form-group
+            display: inline-block
+            vertical-align: middle
+
+        input
+            border: none
+            width: 318px
+            font-family: "HelveticaNeue-light", sans-serif
+            font-size: 14px
+            padding: 13px 0 13px 60px
+            margin-right: 15px
+            box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.27)
+
+.form-group
+    position: relative
+    display: block
+    overflow: hidden
+input
+    border: none
+.email-icon
+    position: absolute
+    left: 20px
+    top: 0
+    background-image: url("../img/icons/SUBSCRIBE.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    bottom: 0
+    margin: auto
+    width: 28px
+    height: 28px
+
+.btn
+    border: none
+    background-color: #FFF
+    border: 5px solid #000
+    padding: 8px 35px
+    color: #000
+    font-family: "HelveticaNeue-bold", sans-serif
+    display: inline-block
+    text-transform: uppercase
+    &:hover, &:active, &:focus
+        color: #000
+        text-decoration: none
+    &.subscribe
+        height: 50px
+        box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.27)
+    &.yellow
+        background-color: $accent
+        border-color: $accent
+    &.btn-lg
+        padding: 17px 50px
+        font-size: 24px
+    &.white
+        border-color: #fff
+        box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.27)
+    &.yellow_border
+        border-color: $accent
+        box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.27)
+
+#fixed_nav_dots
+    position: fixed
+    right: 30px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 99
+    display: none
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        li
+            padding: 5px 0
+            a
+                display: block
+                position: relative
+                width: 25px
+                height: 25px
+                transition: all .3s
+                border-radius: 50%
+                border: 3px solid $accent
+                opacity: 1
+                transform: scale(0.75)
+                transition: all .3s
+                box-shadow: 7px 7px 20px 0 rgba(0,0,0,.20)
+            &:hover a
+                background: $accent
+                transform: scale(.9)
+                transition: all .3s
+        & .selected a
+            background: $accent
+
+
+.toggle-mnu
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  position: absolute
+  right: 18px
+  top: 30px
+
+  span:after, span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span
+    background-color: transparent
+
+  &.on span:before
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.main-mnu
+    margin-top: 15px
+    display: none
+    ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        li
+            display: block
+            text-align: center
+            margin-bottom: 10px
+            a
+                text-transform: uppercase
+                font-size: 18px
+                &:hover, &:active, &:focus
+                    text-decoration: none
+                    color: $accent
+            &.active a
+                color: $accent
+
+.top_bar
+    background-color: $black
+    padding: 20px 0
+    position: relative
+    z-index: 5
+    a
+        color: #fff
+    #bar_logo
+        width: 150px
+    .top_nav
+        ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+            margin-top: 9px
+            li
+                display: inline-block
+                vertical-align: middle
+                padding: 12px 25px
+                &:first-child
+                    border-right: 1px solid #fff
+                    padding-right: 60px
+                &.active a
+                    color: $accent
+                a
+                    text-transform: uppercase
+                    font-size: 18px
+                    transition: all .2s ease
+                    &:hover, &:active, &:focus
+                        text-decoration: none
+                        color: $accent
+    .social_link
+        text-align: left
+        margin-top: 19px
+        a
+            margin-right: 20px
+            svg
+                width: 28px
+
+.owl-carousel
+    &.testimonial-carousel
+        .owl-dots
+            position: absolute
+            left: -11%
+            width: 100%
+            bottom: -20%
+            .owl-dot
+                display: inline-block
+                width: 18px
+                height: 18px
+                border: 3px solid #000
+                border-radius: 50%
+                margin-right: 20px
+                transition: all .3s ease
+                box-sizing: border-box
+                &.active
+                    background-color: #000
+
+section
+    padding: 110px 0
+    position: relative
+    .descr
+        font-family: "HelveticaNeue-medium", sans-serif
+        font-size: 18px
+    &.what_is_elasko
+        padding-top: 250px
+    .what_is_elasko_video
+        background: #737373
+        box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.62)
+        height: 350px
+        width: 110%
+        margin-top: 40px
+        position: relative
+        background-image: url("../img/home_img/Screen_video.jpg")
+        background-size: cover
+        .btn_group
+            position: absolute
+            bottom: 40px
+            right: -10px
+        .video_logo
+            width: 85px
+            position: absolute
+            left: 40px
+            top: 24px
+    .letter
+        position: absolute
+        right: -102px
+        top: -448px
+        z-index: 2
+        right: -55px
+    &.sonja
+        .letter_line
+            position: absolute
+            left: -50px
+            top: -39px
+            z-index: 1
+        padding-top: 20px
+        z-index: 3
+        .meet
+            font-size: 18px
+            position: relative
+            text-align: justify
+            &:before
+                content: ''
+                position: absolute
+                left: -74px
+                top: -35px
+                width: 52px
+                height: 52px
+                background-image: url("../img/icons/fa-quote-left.png")
+                background-position: 0 0
+            &:after
+                content: ''
+                position: absolute
+                right: 0
+                bottom: -77px
+                width: 77px
+                height: 77px
+                background-image: url("../img/icons/fa-quote-right.png")
+                background-repeat: no-repeat
+                background-position: 0 0
+        .meet_content
+            margin-top: 290px
+            margin-bottom: 60px
+            & h1, h2, h3, h4, h5, h6
+                font-size: 18px
+                margin: 0
+                font-family: "HelveticaNeue-medium", sans-serif
+                letter-spacing: normal
+                margin-bottom: 15px
+                margin-top: 40px
+            .btn_group
+                display: block
+                margin-top: 60px
+        .video_meet
+            background: #737373
+            box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.62)
+            height: 350px
+            width: 100%
+            position: relative
+            background-image: url("../img/home_img/Screen-Shot-2017-04-07-at-15.08.jpg")
+            .desc_video
+                position: absolute
+                background-color: rgba(0,0,0,0.62)
+                width: 100%
+                bottom: 0
+                color: #fff
+                padding: 15px
+                font-family: "HelveticaNeue-medium", sans-serif
+                font-size: 15px
+                vertical-align: middle
+                &:hover, &:active, &:focus
+                    text-decoration: none
+                    color: #fff
+                i
+                    float: right
+                    font-size: 26px
+            .video_logo
+                width: 85px
+                position: absolute
+                left: 40px
+                top: 24px
+        .sonja_foto
+            position: absolute
+            right: -150px
+            top: 24%
+            z-index: 4
+
+
+    &.reason_why
+        background-position: center center
+        background-size: cover
+        position: relative
+        padding-bottom: 180px
+        background-color: transparent
+        .layer
+            background-color: rgba(207, 222, 60, 0.8)
+            overflow: hidden
+            padding-bottom: 20px
+            .sec_title
+                text-align: center
+                color: #0e0e0e
+        .reason_item
+            text-align: center
+            font-family: "HelveticaNeue-medium", sans-serif
+            padding: 10px 20px
+            margin-bottom: 20px
+            .item_title
+                font-size: 30px
+                text-transform: uppercase
+                margin-bottom: 10px
+            p
+                margin: 0
+                font-size: 18px
+
+    &.ask_question
+        padding-bottom: 160px
+        .letter_question
+            position: absolute
+            right: -102px
+            top: -200px
+        &:before
+            content: ''
+            position: absolute
+            top: -50px
+            left: 0
+            right: 0
+            margin: 0 auto
+            background-image: url("../img/home_img/sec_line.png")
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            height: 77px
+            width: 100%
+        .sec_title
+            text-align: center
+        .sec_desc
+            text-align: center
+            font-size: 24px
+            font-family: "HelveticaNeue-light", sans-serif
+            margin: 10px 0 0 0
+        .ask_form
+            margin-top: 100px
+            #ask_form_homepage
+                position: relative
+                input
+                    border-bottom: 1px solid #000
+                    width: 100%
+                    margin-bottom: 20px
+                    font-size: 18px
+                    transition: all .3s ease
+                    &:hover, &:active, &:focus
+                        opacity: 1
+                textarea
+                    border: none
+                    border-bottom: 1px solid #000
+                    opacity: .5
+                    transition: all .3s ease
+                    width: 100%
+                    border-top: 1px solid #000
+                    &:hover, &:active, &:focus
+                        opacity: 1
+                label
+                    margin-bottom: 5px
+                    display: block
+                .form_title
+                    font-family: $hfont
+                    transform: rotate(-90deg)
+                    position: absolute
+                    top: 154px
+                    left: -290px
+                    font-size: 100px
+                    white-space: nowrap
+                    letter-spacing: -29px
+                    z-index: 2
+                button
+                    float: right
+                    margin-top: 40px
+        .video_question
+            background: #737373
+            box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.62)
+            height: 456px
+            width: 100%
+            position: relative
+            background-image: url("../img/home_img/Screen_video.jpg")
+            background-size: cover
+            .video_logo
+                width: 85px
+                position: absolute
+                left: 40px
+                top: 24px
+
+    &.testimonial
+        background-color: $accent
+        border-bottom: 40px solid #000
+        padding-bottom: 200px
+        .sec_title
+            text-align: center
+        .sec_desc
+            text-align: center
+            font-size: 24px
+            font-family: "HelveticaNeue-light", sans-serif
+            margin: 10px 0 0 0
+        .what_is_elasko_video
+            width: 100%
+            margin-top: 0
+            margin-top: 87px
+        .test_title
+            margin-top: 87px
+            font-size: 18px
+            text-transform: uppercase
+            i
+                margin: 0 10px
+        .test_descr
+            margin-top: 25px
+            font-size: 18px
+            font-family: "HelveticaNeue-light", sans-serif
+        .author
+            font-family: "HelveticaNeue-bold", sans-serif
+            margin-top: 10px
+        .letter_line_testimonial
+            position: absolute
+            right: -257px
+            bottom: -548px
+    &.contact_info
+        .contact_item
+            text-align: center
+            margin: 50px 0
+            i
+                font-size: 55px
+                display: block
+                margin-bottom: 10px
+            font-size: 24px
+        .social_liks
+            text-align: center
+            a
+                font-size: 35px
+                color: #000
+                width: 70px
+                height: 70px
+                margin-right: 20px
+                border: 1px solid #000
+                border-radius: 50%
+                display: inline-block
+                text-align: center
+                line-height: 70px
+    &.get_in_touch
+        background-color: #000000
+        .sec_title
+            color: #fff
+            text-align: center
+        #get_in_form
+            margin-top: 40px
+            input
+                background-color: transparent
+                width: 100%
+                border-bottom: 1px solid #fff
+                margin-bottom: 30px
+                color: #fff
+            label
+                color: #666666
+                margin-bottom: 5px
+            textarea
+                background-color: transparent
+                border: none
+                color: #fff
+                border-bottom: 1px solid #fff
+                border-top: 1px solid #fff
+                width: 100%
+                margin-bottom: 20px
+            button
+                border-color: $accent
+                float: right
+    .get_sonja
+        position: absolute
+        right: 0
+        top: 16%
+
+footer
+    padding: 130px 0 80px 0
+    position: relative
+    ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        li
+            a
+                color: #000
+                font-family: "HelveticaNeue-light", sans-serif
+                font-size: 18px
+                white-space: nowrap
+                position: relative
+                padding-bottom: 2px
+                &:after
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    display: block
+                    width: 100%
+                    height: 2px
+                    background-color: $accent
+                    content: ""
+                    transform: scale(0)
+                    transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1)
+                &:hover, &:active, &:focus
+                    text-decoration: none
+                    color: #000
+                &:hover:after
+                    transform: scale(1)
+    .social_liks
+        a
+            font-size: 20px
+            color: #000
+            width: 40px
+            height: 40px
+            margin-right: 10px
+            border: 1px solid #000
+            border-radius: 50%
+            display: inline-block
+            text-align: center
+            line-height: 40px
+            transition: all .3s ease
+            &:hover, &:active, &:focus
+                border: 1px solid $accent
+                color: $accent
+            &:after
+                display: none
+    .copyright
+        text-align: center
+        border-top: 1px solid #000
+        margin-top: 30px
+        padding-top: 10px
+        font-family: "HelveticaNeue-light", sans-serif
+    .letter_line_foot
+        position: absolute
+        bottom: 50px
+        left: -50px
+
+
+
+// Page stretchwear
+
+.page_title
+    text-align: center
+.page_desc
+    font-size: 18px
+    font-family: "HelveticaNeue-medium", sans-serif
+    text-align: center
+    i
+        color: $accent
+        font-size: 40px
+        margin: 5px
+    text-align: center
+    .author
+        font-size: 14px
+        font-family: "HelveticaNeue-light", sans-serif
+        text-align: center
+        margin-top: 10px
+
+.bio
+    font-size: 18px
+    font-family: "HelveticaNeue-light", sans-serif
+    border-bottom: 40px solid $accent
+    position: relative
+    padding: 150px 0
+    .bio_title
+        font-family: "HelveticaNeue-bold", sans-serif
+    .letter_line_nohome
+        position: absolute
+        bottom: -554px
+        z-index: 1
+        right: -7%
+.we_have
+    padding: 0 0
+    .owl_we_have
+        position: releative
+    .layer
+        background-color: rgba(207, 222, 60, 0.8)
+        position: absolute
+        left: 10%
+        right: 10%
+        top: 15%
+        bottom: 15%
+        padding: 110px 100px
+        z-index: 2
+        overflow: hidden
+        .we_have_title
+            text-align: center
+            font-size: 30px
+            font-family: "HelveticaNeue-medium", sans-serif
+        i
+            font-size: 40px
+            margin: 10px
+        .author
+            text-align: center
+            font-size: 24px
+            font-family: "HelveticaNeue-light", sans-serif
+            margin-top: 20px
+.function
+    .video_meet
+            background: #737373
+            box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.62)
+            height: 444px
+            width: 100%
+            position: relative
+            background-image: url("../img/home_img/Screen-Shot-2017-04-07-at-15.08.jpg")
+            .desc_video
+                position: absolute
+                background-color: rgba(0,0,0,0.62)
+                width: 100%
+                bottom: 0
+                color: #fff
+                padding: 15px
+                font-family: "HelveticaNeue-medium", sans-serif
+                font-size: 15px
+                vertical-align: middle
+                &:hover, &:active, &:focus
+                    text-decoration: none
+                    color: #fff
+                i
+                    float: right
+                    font-size: 26px
+            .video_logo
+                width: 85px
+                position: absolute
+                left: 40px
+                top: 24px
+.func_cont
+    font-family: "HelveticaNeue-medium", sans-serif
+    margin-top: -30px
+    margin-bottom: -20px
+    .desc
+        margin: 0
+        line-height: 30px
+    ul
+        margin-bottom: 30px
+        li
+            margin-bottom: 10px
+
+.isnohome
+    footer
+        background-color: #000000
+        color: #fff
+        padding: 60px 0
+        a
+            color: #fff
+            position: relative
+            padding-bottom: 2px
+            &:hover
+                color: #fff
+            &:hover:after
+                transform: scale(1)
+            &:after
+                position: absolute
+                bottom: 0
+                left: 0
+                display: block
+                width: 100%
+                height: 2px
+                background-color: $accent
+                content: ""
+                transform: scale(0)
+                transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
+        .social_liks a
+            border-color: #fff
+            &:hover:after
+                display: none
+            &:hover
+                border: 1px solid $accent
+                color: $accent
+        .copyright
+            border-color: #fff
+
+.clothes_store
+    box-shadow: 7px 6px 12px 0 rgba(0,0,0,0.35)
+    padding: 0
+    position: relative
+    .castom_owl_nav
+        position: absolute
+
+        top: 40%
+        width: 100%
+        padding: 0 190px
+        span
+            display: inline-block
+            width: 50px
+            height: 50px
+            background-color: $accent
+            cursor: pointer
+            position: relative
+            border-radius: 50%
+            text-align: center
+            opacity: .7
+            z-index: 2
+            transition: all .3s ease
+            line-height: 50px
+            &:hover, &:active, &:focus
+                opacity: 1
+            i
+                font-size: 25px
+            &.customPrevBtn
+                float: right
+    .owl-discount
+        .owl-dots
+            position: absolute
+            text-align: center
+            width: 100%
+            bottom: 30px
+            .owl-dot
+                display: inline-block
+                width: 18px
+                height: 18px
+                border: 3px solid #000
+                border-radius: 50%
+                margin-right: 15px
+                transition: all .3s ease
+                box-sizing: border-box
+                &.active
+                    background-color: #000
+.discount
+    border-bottom: 40px solid $accent
+    overflow: hidden
+    .sec_title
+        text-align: center
+    .sec_desc
+        text-align: center
+        font-size: 24px
+        margin: 0
+        font-family: "HelveticaNeue-light", sans-serif
+    .btn_group
+        text-align: center
+        margin-top: 40px
+    .letter_line_nohome
+        position: absolute
+        top: 29px
+        left: -126px
+
+// Page Become Teacher
+.head_sec
+    .page_desc
+        font-family: "HelveticaNeue-light", sans-serif
+.quote_sonja
+    background-image: url("../img/become_teach_img/quote_sonja_bg.jpg")
+    .layer
+        background-color: rgba(207, 222, 60, 0.53)
+        text-align: center
+        padding: 150px 50px
+        font-size: 30px
+        font-family: "HelveticaNeue-bold", sans-serif
+        i
+            font-size: 50px
+            margin: 10px
+        .author
+            font-size: 18px
+            font-family: "HelveticaNeue-light", sans-serif
+            margin-top: 40px
+.find_out_more
+    text-align: center
+    p
+        font-family: "HelveticaNeue-light", sans-serif
+        font-size: 18px
+    h2
+        font-family: "HelveticaNeue-bold", sans-serif
+        letter-spacing: normal
+        font-size: 30px
+        font-weight: normal
+    i
+        font-size: 30px
+        cursor: pointer
+        display: block
+        margin: 20px 0
+    a
+        color: #000
+        font-family: "HelveticaNeue-light", sans-serif
+        text-decoration: none
+        margin-bottom: 20px
+        display: inline-block
+        position: relative
+        &:after
+            position: absolute
+            bottom: 0
+            left: 0
+            display: block
+            width: 100%
+            height: 2px
+            background-color: $accent
+            content: ""
+            transform: scale(0)
+            transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
+        &:hover:after
+            transform: scale(1)
+
+
+// Page Become Blog Post
+
+#search
+    input
+        border-bottom: 1px solid #000
+        width: 100%
+        padding-left: 35px
+        padding-bottom: 5px
+        font-family: "HelveticaNeue-light", sans-serif
+        font-size: 18px
+    button
+        position: absolute
+        left: 0
+        background-color: transparent
+        border: none
+        top: 5px
+        i
+            font-size: 20px
+.tags
+    font-size: 12px
+    text-align: center
+    font-family: "HelveticaNeue-light", sans-serif
+    margin-top: 10px
+    span
+        margin-right: 10px
+        transition: all .3s ease
+        i
+            margin-left: 3px
+        &:hover
+            color: $accent
+            cursor: pointer
+.post_img, .structure_slider_box
+    position: relative
+    .castom_owl_nav
+        position: absolute
+        top: 50%
+        width: 100%
+        padding: 0 190px
+        span
+            display: inline-block
+            width: 50px
+            height: 50px
+            background-color: #fff
+            cursor: pointer
+            position: relative
+            border-radius: 50%
+            text-align: center
+            opacity: .7
+            z-index: 2
+            transition: all .3s ease
+            line-height: 50px
+            &:hover, &:active, &:focus
+                opacity: 1
+            i
+                font-size: 25px
+            &.customPrevBtn
+                float: right
+.page_post
+    .post_title
+        margin: -1px
+        display: block
+        text-align: center
+        background-color: $accent
+        padding: 0 0 20px 0
+    h1
+        margin-bottom: -30px
+    time
+        font-family: "HelveticaNeue-light", sans-serif
+        font-size: 18px
+    .post_content
+        padding-top: 60px
+        text-align: center
+        font-family: "HelveticaNeue-medium", sans-serif
+        img
+            width: 33.33333%
+            float: left
+            margin: 100px 0
+.page_post
+    border-bottom: 40px solid $accent
+    position: relative
+    .letter_line_nohome
+        position: absolute
+        bottom: -554px
+        z-index: 1
+        right: -7%
+.more_posts
+    h3
+        text-align: center
+        font-size: 60px
+        letter-spacing: -18px;
+        margin-bottom: 30px
+.post_item
+    position: relative
+    img
+        width: 100%
+        transition: all .3s ease
+    .post_title
+        text-align: center
+        font-family: "HelveticaNeue-bold", sans-serif
+        font-size: 18px
+        text-transform: uppercase
+        margin-top: 15px
+    figure
+        overflow: hidden
+    a
+        color: #000
+        text-decoration: none
+        transition: all .3s ease
+        display: block
+        &:hover, &:active, &:focus
+            color: $accent
+        &:hover img
+            transform: scale3d(1.2, 1.2, 2)
+.postnav
+    text-align: center
+    margin: 40px 0 10px 0
+    .btn
+        width: 210px
+        margin-right: 20px
+
+
+
+// Page Become Blog
+.blog
+    border-bottom: 40px solid $accent
+    .letter_line_blog
+        position: absolute
+        left: -133px
+        top: -63px
+    .logo_letter_blog
+        position: absolute
+        right: -71px
+        transform: scaleX(-1);
+        bottom: 168px
+.latest_post
+    text-align: center
+    padding-top: 40px
+    border-bottom: 40px solid $accent
+    overflow: hidden
+    .letter_line_post
+        position: absolute
+        right: -133px
+        bottom: -543px
+.latest_post_box
+    margin-top: 40px
+    margin-bottom: 110px
+    overflow: hidden
+    .post_item
+        position: relative
+        a
+            color: #000
+            text-decoration: none
+            transition: all .3s ease
+            display: block
+            &:hover, &:active, &:focus
+                color: #000
+            &:hover img
+        .post_layer
+            position: absolute
+            z-index: 2
+            left: 0
+            right: 0
+            margin: 90px 30px
+            padding-top: 60px
+            top: 0
+            bottom: 0
+            background-color: rgba(207, 222, 60, 0.8)
+
+
+// Page Become Teacher Group and PT
+.head_sec
+    &.teacher_group
+        border-bottom: 40px solid $accent
+        position: relative
+    .letter_line_nohome
+        position: absolute
+        right: -122px
+        bottom: -547px
+.bio
+    &.teacher_group
+        border: none
+.who_isit_for
+    background-color: $black
+    border-bottom: 40px solid $accent
+    color: #fff
+    .letter_line_nohome
+        position: absolute
+        bottom: 0
+        left: -122px
+        bottom: -547px
+    .sec_title
+        text-align: center
+    .sec_desc
+        font-size: 24px
+        text-align: center
+        transform: uppercase
+        font-family: "HelveticaNeue-light", sans-serif
+        margin: 0
+    .who_isit_for_ul
+        font-family: "HelveticaNeue-light", sans-serif
+        font-size: 24px
+        margin-top: 60px
+        li
+            margin-bottom: 15px
+            .fa-li
+                left: -86px
+                top: 8px
+.what_need
+    padding-top: 20px
+    position: relative
+    .bg_image
+        position: absolute
+        right: -19px
+        z-index: 1
+        top: 41px
+    .sec_title
+        text-align: center
+        margin-top: 80px
+        position: relative
+        z-index: 2
+    .sec_desc
+        font-size: 24px
+        text-align: center
+        transform: uppercase
+        font-family: "HelveticaNeue-light", sans-serif
+        margin-top: 50px
+        margin-bottom: 50px
+        position: relative
+        z-index: 2
+.icons_group
+    position: relative
+    overflow: hidden
+    z-index: 2
+    &:before
+        content: ''
+        height: 3px
+        background-color: $accent
+        width: 70%
+        position: absolute
+        left: 0
+        right: 0
+        margin: 0 auto
+        top: 40%
+.icon_item
+    text-align: center
+    span
+        display: inline-block
+        width: 150px
+        height: 150px
+        background-color: #000
+        border-radius: 50%
+        border: 10px solid #fff
+        position: relative
+        color: #fff
+        line-height: 135px
+        text-transform: uppercase
+    figcaption
+        margin-top: 0px
+        text-transform: uppercase
+        font-family: "HelveticaNeue-light", sans-serif
+.benefits
+    background-color: $accent
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        border: 40px solid transparent
+        border-top: 43px solid $accent
+        bottom: -80px
+        right: 0
+        left: 0
+        width: 0
+        margin: auto
+    .sec_title
+        text-align: center
+        position: relative
+        z-index: 2
+    .sec_desc
+        font-size: 24px
+        text-align: center
+        transform: uppercase
+        font-family: "HelveticaNeue-light", sans-serif
+.promise
+    font-size: 24px
+    transform: uppercase
+    font-family: "HelveticaNeue-light", sans-serif
+    .sec_title
+        font-family: $hfont
+        font-size: 60px
+        letter-spacing: -20px
+        font-weight: normal
+    .logo_letter
+        position: absolute
+        right: -71px;
+        transform: scaleX(-1)
+        bottom: 130px
+.enqueries
+    padding-bottom: 110px!important
+    .layer
+        padding: 70px 100px!important
+        background-color: rgba(207,222,60,.6)!important
+    .btn_group
+        text-align: center
+        margin-top: 40px
+    .sec_title
+        line-height: 120px
+.join_us
+    border-bottom: 40px solid $accent
+    overflow: hidden
+    .sec_title
+        text-align: center
+    .sec_desc
+        font-size: 24px
+        text-align: center
+        transform: uppercase
+        font-family: "HelveticaNeue-light", sans-serif
+    .letter_line_nohome
+        position: absolute
+        bottom: 0
+        left: -122px
+        bottom: -547px
+#join_us_form
+    border: 10px solid #000
+    text-align: center
+    padding: 50px 80px
+    margin-top: 60px
+    input
+        display: block
+        border-bottom: 1px solid #000
+        width: 100%
+        margin-bottom: 30px
+    button
+        margin-top: 50px
+
+
+// Page Structure
+.structure
+    .page_desc
+        font-family: "HelveticaNeue-medium", sans-serifs
+.structure_slider
+    padding-top: 0
+    .page_title
+        text-align: center
+        margin-top: 40px
+.timeline
+    text-align: center
+    margin-top: 20px
+    .icon_year
+        display: inline-block
+        width: 178px
+        height: 178px
+        border: 25px solid #000
+        border-radius: 50%
+        text-align: center
+        line-height: 140px
+        font-size: 48px
+        font-family: $hfont
+        letter-spacing: -10px
+        margin: 0 50px
+        box-shadow: 7px 6px 16px 0px rgba(0,0,0,0.80)
+        position: relative
+        margin-bottom: 180px
+        &:after
+            content: ''
+            position: absolute
+            border: 20px solid transparent
+            border-top-width: 40px
+            border-top-style: solid
+            border-top-color: transparent
+            border-top: 40px solid #000
+            bottom: -80px
+            right: 0
+            left: 0
+            width: 0
+            margin: auto
+    figure
+        position: relative
+    img
+        position: absolute
+        right: 0
+        left: 0
+        margin: 0 auto
+        top: 180px
+    figcaption
+        width: 280px
+        display: inline-block
+        vertical-align: top
+        position: relative
+.video
+    box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.62)
+    height: 534px
+    background-image: url("../img/structure_img/video_bg.jpg")
+    background-size: cover
+    .video_logo
+        width: 85px
+.reason_why
+    &.structure
+        padding-bottom: 110px
+        border-bottom: 40px solid $accent
+        overflow: hidden
+        .layer
+            background-color: #fff
+        .letter_line_nohome
+            position: absolute
+            left: -122px
+            bottom: -547px
+.license_info
+    background-color: #000
+    color: #fff
+    .sec_title
+        text-align: center
+    .sec_desc
+        font-size: 18px
+        text-align: center
+        transform: uppercase
+        font-family: "HelveticaNeue-light", sans-serif
+    .btn_group
+        text-align: center
+        margin-top: 50px
+
+@import "media" // Всегда в конце
